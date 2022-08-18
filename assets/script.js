@@ -1,33 +1,44 @@
 var hours = $(".hour")
 var currentDay = $("#currentDay")
-var currentTime = parseInt(moment().format("LLLL"))
+var currentTime = parseInt(moment().format("h"))
+var saveButton = localStorage.setItem("text")
 
 console.log(typeof currentTime);
 
 currentDay.text(moment().format("LLLL")); // update this for the current hour non military
 console.log(currentDay);
 
-//for (var i = 0; i < hours.length; i++) {
-  //console.log(hours[i])
+var textInput = document.createElement("hour"); 
+textInput.setAttribute("type", "text"); 
 
-  //var currentHour = hours[i].attr("id");
-  //var now = moment().format("h")
-// grab data-id with if statement and compare with past/present value
-  //if (currentHour < now) {
-    //console.log("past");
+
+
 
 hours.each(function(){
   let workTime = parseInt($(this).attr("data-id"))
   console.log(workTime); 
 
-  if (workTime < currentTime ) {
+  
+  //this produces the color-change for past time segment
+  if (workTime < currentTime) {
+    
+    $(this).addClass("past") 
     console.log("past")
   }
 
+  //this produces the color-change for future time segment
   else if (workTime > currentTime) {
+
+    $(this).addClass("future")
     console.log("future")
+
   }
+  //this produces the color-change for present time segment
   else {
+
+    $(this).addClass("present")
+
     console.log("present");
+    $(".present")
   }
 })

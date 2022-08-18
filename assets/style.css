@@ -13,6 +13,24 @@ textarea{
   padding: 10px;
 }
 
+.container {
+  margin-bottom: 100px;
+  
+}
+
+
+input {
+  height: 50%;
+  width: 75%;
+  margin-top: 20px;
+  margin-left: 50px;
+  justify-content: center;
+  background-color: transparent;
+  border-top: black;
+  border: none;
+ 
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -37,9 +55,11 @@ textarea{
 }
 
 .hour {
+  height: 75px;
   background-color: #ffffff;
-  color: #000000;
-  border-top: 1px dashed #000000;
+  color: #f5efef;
+  border-top: 1px solid #000000;
+  ;
 }
 
 .past {
