@@ -1,7 +1,7 @@
 var hours = $(".hour")
 var currentDay = $("#currentDay")
 var currentTime = parseInt(moment().format("h"))
-var saveButton = localStorage.setItem("text")
+//var saveButton = localStorage.setItem
 
 console.log(typeof currentTime);
 
